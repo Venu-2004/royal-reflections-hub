@@ -86,8 +86,8 @@ const ProjectsSection = () => {
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Live Demo
                   </Button>
-                  <Button variant="outline" size="sm" className="glass">
-                    <Github className="h-4 w-4 mr-2" />
+                  <Button variant="outline" size="sm" className="glass text-white border-white/20 hover:bg-white/10">
+                    <Github className="h-4 w-4 mr-2 text-white" />
                     Code
                   </Button>
                 </div>
