@@ -89,7 +89,7 @@ const ResumeSection = () => {
             
             <div className="space-y-6">
               {experiences.map((exp, index) => (
-                <Card key={index} className="glass border-white/20">
+                <Card key={index} className="glass border-white/20 bg-transparent">
                   <CardContent className="p-6">
                     <h4 className="text-lg font-semibold text-white mb-1">{exp.position}</h4>
                     <p className="text-primary font-medium mb-2">{exp.company}</p>
@@ -112,7 +112,7 @@ const ResumeSection = () => {
             
             <div className="space-y-6 mb-8">
               {education.map((edu, index) => (
-                <Card key={index} className="glass border-white/20">
+                <Card key={index} className="glass border-white/20 bg-transparent">
                   <CardContent className="p-6">
                     <h4 className="text-lg font-semibold text-white mb-1">{edu.degree}</h4>
                     <p className="text-secondary font-medium mb-2">{edu.institution}</p>
@@ -131,7 +131,7 @@ const ResumeSection = () => {
               <h3 className="text-2xl font-bold text-white">Certifications</h3>
             </div>
             
-            <Card className="glass border-white/20">
+            <Card className="glass border-white/20 bg-transparent">
               <CardContent className="p-6">
                 <div className="space-y-3">
                   {certifications.map((cert, index) => (

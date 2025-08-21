@@ -84,7 +84,7 @@ const AboutSection = () => {
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <Card key={index} className="glass border-white/20 hover:glow transition-all duration-300">
+            <Card key={index} className="glass border-white/20 hover:glow transition-all duration-300 bg-transparent">
               <CardContent className="p-6 text-center">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-4`}>
                   <skill.icon className={`h-8 w-8 ${skill.color}`} />

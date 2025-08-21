@@ -64,7 +64,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="glass border-white/20">
+          <Card className="glass border-white/20 bg-transparent">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
               
@@ -132,7 +132,7 @@ const ContactSection = () => {
 
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="glass border-white/20 hover:glow transition-all duration-300">
+                <Card key={index} className="glass border-white/20 hover:glow transition-all duration-300 bg-transparent">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
                       <div className="p-3 bg-primary rounded-full">
@@ -154,7 +154,7 @@ const ContactSection = () => {
             </div>
 
             {/* Availability Status */}
-            <Card className="glass border-white/20">
+            <Card className="glass border-white/20 bg-transparent">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
