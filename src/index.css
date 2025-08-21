@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Portfolio Design System - Purple Glassmorphism Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Purple Gradient Portfolio Theme */
+    --background: 249 100% 3.9%;
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -17,17 +16,26 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 249 100% 67%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 270 100% 87%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 270 50% 20%;
+    --muted-foreground: 270 20% 80%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 292 100% 76%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Custom Portfolio Colors */
+    --glass: 0 0% 100%;
+    --glass-border: 0 0% 100%;
+    --gradient-primary: linear-gradient(135deg, hsl(249, 100%, 67%) 0%, hsl(292, 100%, 76%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(270, 100%, 87%) 0%, hsl(249, 100%, 67%) 100%);
+    --gradient-bg: linear-gradient(135deg, hsl(249, 100%, 3.9%) 0%, hsl(270, 50%, 8%) 50%, hsl(292, 60%, 12%) 100%);
+    --shadow-glass: 0 8px 32px 0 rgba(147, 51, 234, 0.37);
+    --shadow-glow: 0 0 40px hsl(249, 100%, 67%, 0.5);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -100,6 +108,33 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    background: var(--gradient-bg);
+    @apply text-foreground min-h-screen;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glow {
+    box-shadow: var(--shadow-glow);
   }
 }
